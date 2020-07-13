@@ -35,7 +35,8 @@
   margin-bottom: 40px;
 }
 
-#banner button {
+#banner button a {
+  color: white;
   text-transform: uppercase;
   font-size: 1.125em;
 }
@@ -79,7 +80,7 @@
 }
 
 #skills p {
-  font-size: 0.750em;
+  font-size: 0.75em;
   margin-bottom: 20px;
 }
 
@@ -90,7 +91,7 @@ progress {
 progress[value] {
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   width: 500px;
   height: 5px;
 }
@@ -117,23 +118,23 @@ progress[value]::-webkit-progress-value {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 auto;
   padding: 100px 0;
 }
 
-#numbers .picture-box {
+#numbers .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #numbers img {
@@ -146,10 +147,14 @@ progress[value]::-webkit-progress-value {
 }
 
 #numbers p {
-  font-size: 0.750em;
+  font-size: 0.75em;
 }
 
 /* ///////////////////////////////////////////////////////////// GALLERY */
+
+#gallery {
+  text-align: center;
+}
 
 #gallery .container {
   max-width: 1170px;
@@ -158,11 +163,12 @@ progress[value]::-webkit-progress-value {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #10c9c3;
+  margin-bottom: 45px;
 }
 
 #gallery img {
@@ -174,12 +180,12 @@ progress[value]::-webkit-progress-value {
   opacity: 0.5;
 }
 
-#gallery p {
-  text-align: center;
-  padding-top: 45px;
+#gallery a {
+  color: black;
+  cursor: default;
 }
 
-#gallery p:hover {
+#gallery a:hover {
   text-decoration: underline;
   cursor: default;
 }
@@ -234,15 +240,36 @@ video {
 }
 
 #services h6 {
-  font-size: 0.750em;
+  font-size: 0.75em;
   margin-bottom: 20px;
 }
 
 #services p {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 1em;
   color: #787878;
 }
+
+#services .c1 {
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+  #services .c2 {
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+  #services .c3 {
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s; }
+  #services .c4 {
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s; }
 
 /* ///////////////////////////////////////////////////////////// TESTIMONIALS */
 
@@ -252,19 +279,19 @@ video {
   text-align: center;
 }
 
-#testimonials .container {
+#testimonials .slider {
   max-width: 1170px;
   margin: 0 auto;
   padding: 180px 20% 60px;
 }
 
 #testimonials p {
-  font-size: 1.500em;
+  font-size: 1.5em;
   margin-bottom: 35px;
 }
 
 #testimonials h6 {
-  font-size: 0.750em;
+  font-size: 0.75em;
   font-weight: 500;
   margin-bottom: 105px;
 }
@@ -274,8 +301,8 @@ video {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .switch {
@@ -285,6 +312,42 @@ video {
   background-color: #ffffff;
   opacity: 50%;
   margin: 0 5px 60px;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.switch:hover {
+  opacity: 1;
+}
+
+.slider .slide {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  display: none;
+}
+
+.slider .slide:first-child {
+  display: block;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* /////////////////////////////////////////////////////////////////////// CLIENTS */
@@ -294,13 +357,13 @@ video {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 70px 9.5% 160px;
 }
 
@@ -333,10 +396,10 @@ form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 input {
@@ -370,10 +433,7 @@ textarea {
   margin-top: 30px;
 }
 
-
-
-
-  /* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
 
 @media screen and (max-width: 1024px) {
   #banner .textBox {
@@ -396,8 +456,8 @@ textarea {
   #numbers .picture-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
   }
 
@@ -430,11 +490,11 @@ textarea {
   textarea {
     min-width: 80%;
   }
-  
+
   #user-name {
     margin-right: 0;
   }
-  
+
   #user-name,
   #user-mail {
     min-width: 80%;
@@ -452,15 +512,15 @@ textarea {
   #numbers .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   #numbers .picture-box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin: 30px 0;
   }
 

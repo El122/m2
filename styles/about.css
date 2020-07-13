@@ -47,7 +47,7 @@ main p {
   padding: 100px 0;
 }
 
-#numbers .picture-box {
+#numbers .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,6 +117,10 @@ main p {
   font-size: 1em;
   color: #787878;
   margin: 40px 5%;
+}
+
+#getProject a {
+  color: #fff;
 }
 
 

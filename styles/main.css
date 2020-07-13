@@ -145,6 +145,9 @@ footer a {
     top: 35px;
     left: 8%; }
 
+  nav {
+    width: 100%;;}
+
   header .container {
     justify-content: flex-end;
     width: 100%;
@@ -154,8 +157,8 @@ footer a {
   .navMenu {
     display: none;
     margin-top: 50px;
-    width: 100%;
-    text-align: right; }
+    text-align: right; 
+    background-color: #e9e9e9;}
 
   .navMenu li {
     display: block;
