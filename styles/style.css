@@ -127,7 +127,6 @@ progress[value]::-webkit-progress-value {
 }
 
 #numbers .card {
-  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
