@@ -9,6 +9,9 @@
 
 #banner {
   background-color: #e9e9e9;
+  background: url("../img/banner.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 240px 0 200px;
 }
 
@@ -20,6 +23,7 @@
 #banner .textBox {
   margin-left: 50%;
   padding: 5%;
+  background-color: #ffffffd0;
 }
 
 #banner .container h1 {
@@ -66,9 +70,12 @@
 
 #skills {
   background-color: #e9e9e9;
+  background: url("../img/skills.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .skills-text {
-  background-color: #ffffff;
+  background-color: #ffffffe0;
   padding: 165px 10% 165px;
   width: 500px;
 }
@@ -254,29 +261,35 @@ video {
   -webkit-animation: fadeIn;
   animation: fadeIn;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s; }
-  #services .c2 {
+  animation-duration: 1s;
+}
+#services .c2 {
   -webkit-animation: fadeIn;
   animation: fadeIn;
   -webkit-animation-duration: 2s;
-  animation-duration: 2s; }
-  #services .c3 {
+  animation-duration: 2s;
+}
+#services .c3 {
   -webkit-animation: fadeIn;
   animation: fadeIn;
   -webkit-animation-duration: 3s;
-  animation-duration: 3s; }
-  #services .c4 {
+  animation-duration: 3s;
+}
+#services .c4 {
   -webkit-animation: fadeIn;
   animation: fadeIn;
   -webkit-animation-duration: 4s;
-  animation-duration: 4s; }
+  animation-duration: 4s;
+}
 
 /* ///////////////////////////////////////////////////////////// TESTIMONIALS */
 
 #testimonials {
+  position: relative;
   background-color: #10c9c3;
   color: #ffffff;
   text-align: center;
+  height: 600px;
 }
 
 #testimonials .slider {
@@ -297,12 +310,15 @@ video {
 }
 
 #switch-case {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .switch {
