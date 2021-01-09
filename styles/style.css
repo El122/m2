@@ -4,7 +4,6 @@
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
-
 /* /////////////////////////////////////////////////////////// BANNER */
 
 #banner {
@@ -12,16 +11,26 @@
   background: url("../img/banner.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 240px 0 200px;
+  height: 100vh;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #banner .container {
-  margin: 0 auto;
   max-width: 1170px;
 }
 
 #banner .textBox {
-  margin-left: 50%;
   padding: 5%;
   background-color: #ffffffd0;
 }
@@ -145,7 +154,7 @@ progress[value]::-webkit-progress-value {
 }
 
 #numbers img {
-  margin-right: 30px;
+  margin-right: 5%;
 }
 
 #numbers h6 {
@@ -235,7 +244,7 @@ video {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  padding: 205px 8.5% 100px;
+  padding: 100px 8.5%;
   -ms-grid-columns: auto 40px auto 40px auto 40px auto;
   grid-template-columns: auto auto auto auto;
   grid-column-gap: 40px;
@@ -325,10 +334,9 @@ video {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: #ffffff;
+  background-color: #fde0e0;
   opacity: 50%;
   margin: 0 5px 60px;
-  transition: background-color 0.6s ease;
 }
 
 .active,
@@ -469,22 +477,19 @@ textarea {
     width: 100%;
   }
 
-  #numbers .picture-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
+  #numbers .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 40px 200px;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 40px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   #numbers img {
-    margin: 0 0 15px;
-  }
-
-  #services .container {
-    -ms-grid-columns: auto 40px auto;
-    grid-template-columns: auto auto;
-    grid-column-gap: 40px;
+    margin: 10px;
   }
 
   #services .card {
@@ -547,5 +552,65 @@ textarea {
 
   #gallery img {
     max-width: 50%;
+  }
+
+  #services .container {
+    -ms-grid-columns: 200px 200px;
+    grid-template-columns: 200px 200px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  #testimonials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  #testimonials .slider {
+    padding: 0 8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #numbers .container {
+    margin: 0 auto;
+    max-width: 250px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  #numbers {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #services .container {
+    -ms-grid-columns: 200px;
+    grid-template-columns: 200px;
   }
 }
