@@ -36,8 +36,14 @@ header {
 
 header .container {
   max-width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
 }
@@ -89,22 +95,19 @@ button:hover {
 
 footer {
   background-color: #141414;
-  color: #ffffff;
+  color: #ffffffc2;
   font-size: 13px;
 }
 
 footer .container {
-  padding: 100px 15px;
+  padding: 40px;
   max-width: 1170px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 40px 1fr 40px 1fr 40px 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-gap: 40px;
 }
 
 footer h4 {
@@ -122,14 +125,8 @@ footer li {
   display: block;
 }
 
-footer .menu,
-.contacts {
-  margin-left: 50px;
-  margin-top: 30px;
-}
-
 footer a {
-  color: #ffffff;
+  color: #ffffff8e;
   cursor: pointer;
 }
 
@@ -147,10 +144,11 @@ footer a {
   }
 
   header .container {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     width: 100%;
     margin: 0;
-    padding: 0;
   }
 
   .navMenu {
@@ -158,6 +156,7 @@ footer a {
     margin-top: 50px;
     text-align: right;
     background-color: #e9e9e9;
+    padding: 20px 0;
   }
 
   .navMenu li {
@@ -189,5 +188,22 @@ footer a {
 
   #menuCheckbox:checked + nav[role="navigation"] .togleButton:before {
     content: attr(data-close);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  footer .container {
+    -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  footer .info {
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+  }
+
+  footer .menu {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
   }
 }
